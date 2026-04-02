@@ -77,8 +77,6 @@ function salary(text) {
   return Number(cleanText);
 }
 
-const active = document.querySelectorAll('tbody tr');
-
 body.addEventListener('click', (e) => {
   const clickedRow = e.target.closest('tr');
   if (!clickedRow) return;
@@ -167,17 +165,17 @@ form.addEventListener('submit', (e) => {
   const salaryValue = salaryInput.value;
 
   if (nameValue === '' || positionValue === ''|| ageValue === '' || salaryValue === '') {
-    showNotification('Input the data corect', true);
+    showNotification('Input the data correct', true);
     return;
   }
 
   if (nameValue.length < 4) {
-    showNotification('Input the data corect', true);
+    showNotification('Name is too short', true);
     return;
   }
 
   if (ageValue < 18 || ageValue > 90) {
-    showNotification('Input the data corect', true);
+    showNotification('Age must be between 18 and 90', true);
     return;
   }
 
