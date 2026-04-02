@@ -92,13 +92,13 @@ body.addEventListener('click', (e) => {
 const form = document.createElement('form');
 form.classList.add('new-employee-form');
 
-const name = document.createElement('input');
-name.type = 'text';
-name.name = 'name';
-name.setAttribute('data-qa', 'name');
+const namee = document.createElement('input');
+namee.type = 'text';
+namee.name = 'name';
+namee.setAttribute('data-qa', 'name');
 const nameL = document.createElement('label');
 nameL.textContent = 'Name:';
-nameL.append(name);
+nameL.append(namee);
 form.append(nameL);
 
 const position = document.createElement('input');
@@ -158,7 +158,7 @@ document.body.append(form);
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const nameValue = name.value;
+  const nameValue = namee.value;
   const positionValue = position.value;
   const officeValue = officeSelect.value;
   const ageValue = ageInput.value;
